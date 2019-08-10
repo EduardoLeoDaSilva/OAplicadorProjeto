@@ -120,7 +120,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CadastrosController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\RestritoController.cs" />
+    <Compile Include="Controllers\ServicosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
