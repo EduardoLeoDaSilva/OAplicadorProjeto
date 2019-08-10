@@ -2,8 +2,8 @@
         <div class="form-service">
 
             <div class="box-voltar">
-                <a href=""><img src="images/icon-voltar.svg" class="icon-back"></a>
-                <img src="images/car.svg" class="icon-service">
+                <a href=""><img src="~/images/icon-voltar.svg" class="icon-back"></a>
+                <img src="~/images/car.svg" class="icon-service">
                 <div class="title-service">
                     <p>Envelopamento de Veículo</p>
                     <p>Orçamento</p>
@@ -16,38 +16,42 @@
                     <div class="formas-pagamento">
                         <div>
                             <a class="selecione-pagamento" data-id='1'>
-                                <img src="images/button-boleto.png">
+                                <img src="~/images/button-boleto.png">
                                 <p>Boleto bancário</p>
                             </a>
                         </div>
                         <div>
                             <a class="selecione-pagamento" data-id='2'>
-                                <img src="images/button-pagamentobancario.png">
+                                <img src="~/images/button-pagamentobancario.png">
                                 <p>Despósito em conta</p>
                             </a>
                         </div>
                         <div>
                             <a class="selecione-pagamento" data-id='3'>
-                                <img src="images/button-pagseguro.png">
+                                <img src="~/images/button-pagseguro.png">
                                 <p>PagSeguro</p>
                             </a>
                         </div>
                     </div>
                     <div class="pagamento-selecionado" data-id='1'>
                         <button>Gerar boleto</button>
-                        <p>Para visualizar o boleto e realizar o pagamento, clique no botão acima.<br><br> Seu pedido
+                        <p>
+                            Para visualizar o boleto e realizar o pagamento, clique no botão acima.<br><br> Seu pedido
                             será
                             iniciado após a confirmação do pagamento. A compensação bancária pode levar de 1 a 3 dias
-                            úteis.</p>
+                            úteis.
+                        </p>
                     </div>
                     <div class="pagamento-selecionado" data-id='2'>
-                        <p>Selecione o banco de sua preferência e deposite na conta indicada a seguir. Por favor, envie
-                            o comprovante para: <a href="" class="email-contato">contato@aplicador.com.</a></p>
+                        <p>
+                            Selecione o banco de sua preferência e deposite na conta indicada a seguir. Por favor, envie
+                            o comprovante para: <a href="" class="email-contato">contato@aplicador.com.</a>
+                        </p>
                         <div class="pagamento-radio">
                             <input type="radio" name="pagamento" /> <span>Banco do Brasil</span><br>
                             <input type="radio" name="pagamento" /> <span>Santander</span><br>
                             <input type="radio" name="pagamento" /> <span>Itaú</span>
-                        </div>                        
+                        </div>
                         <div class="conta-banco">
                             001 - Banco do Brasil<br>
                             Agência: 5106<br>
@@ -66,7 +70,7 @@
                         <p>Possui um código promocional?</p>
                         <div class="codigo-desconto">
                             <input type="text">
-                            <img src="images/icon-round-check.svg">
+                            <img src="~/images/icon-round-check.svg">
                         </div>
                         <p class="resumo-title">Resumo do pedido</p>
                         <table class="table-total">

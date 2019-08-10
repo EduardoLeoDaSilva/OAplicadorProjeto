@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="~/Content/slick/slick-theme.css">
 </head>
 <body>
-
     <div class="container body-content">
         <div id="section-deslize"></div>
         <div class="all-menu">
             <div class="content-top">
                 <div class="content-logo">
-                    <img src="images/oaplicador-logo.svg" class="logo">
+                    <img src="~/images/oaplicador-logo.svg" class="logo">
                     <p>A maior plataforma de aplicadores de adesivos do Brasil</p>
                 </div>
                 <nav id="menu-responsivo">
-                    <a href="#" class="slide-menu-open"><img src="images/menu.svg"></a>
+                    <a href="#" class="slide-menu-open"><img src="~/images/menu.svg"></a>
                     <div class="side-menu-overlay"></div>
                     <div class="side-menu-wrapper">
                         <a href="#" class="menu-close">&times;</a>
@@ -46,28 +45,33 @@
                     <a href="#">Trabalhos disponíveis</a><br>
                     <a href="#" class="menu-login">Login</a><br>
                     <a id="Busca" onclick="showSearch();">
-                        <img id="imgBusca" src="images/search.svg"
+                        <img id="imgBusca" src="~/images/search.svg"
                              class="buscar-icon">
                     </a>
                     <a href="https://api.whatsapp.com/send?phone=554197552748&text=sua%20mensagem" target="_blank">
-                        <img id="imgBusca" src="images/whatsapp-icon.svg" class="whatsapp-icon">
+                        <img id="imgBusca" src="~/images/whatsapp-icon.svg" class="whatsapp-icon">
                     </a>
-                    <a id="Busca" onclick="showMenu();"><img id="imgBusca" src="images/menu.svg" class="buscar-icon"></a>
+                    <a id="Busca" onclick="showMenu();"><img id="imgBusca" src="~/images/menu.svg" class="buscar-icon"></a>
                 </nav>
             </div>
-            <div class="menu-service">
-                <ul>
-                    <li><a href="servico-parede.html"><img src="images/parede.png"><br>Parede</a></li>
-                    <li><a href="servico-pisos.html"><img src="images/piso.png"><br>Piso</a></li>
-                    <li><a href="servico-teto.html"><img src="images/teto.png"><br>Teto</a></li>
-                    <li><a href="servico-veiculo.html"><img src="images/veiculo.png"><br>Veículo</a></li>
-                    <li><a href="servico-moto.html"><img src="images/moto.png"><br>Moto</a></li>
-                    <li><a href="servico-caminhao.html"><img src="images/caminhao.png"><br>Caminhão</a></li>
-                    <li><a href="servico-bau.html"><img src="images/bau.png"><br>Baú</a></li>
-                    <li><a href="servico-geladeira.html"><img src="images/geladeira.png"><br>Geladeira</a></li>
-                    <li><img src="images/outras.png"><br>Outras</li>
-                </ul>
-            </div>
+            @if (this.Url.Action().ToString().Contains("index") || this.Url.Action().ToString() == "/")
+            {
+
+                <div class="menu-service">
+                    <ul>
+                        <li><a href="@Url.Action("ServicoParede", "Servicos")"><img src="~/images/parede.png"><br>Parede</a></li>
+                        <li><a href="@Url.Action("ServicoPisos", "Servicos")"><img src="~/images/piso.png"><br>Piso</a></li>
+                        <li><a href="@Url.Action("ServicoTeto", "Servicos")"><img src="~/images/teto.png"><br>Teto</a></li>
+                        <li><a href="@Url.Action("ServicoVeiculo", "Servicos")" ><img src="~/images/veiculo.png"><br>Veículo</a></li>
+                        <li><a href="@Url.Action("ServicoMoto", "Servicos")"><img src="~/images/moto.png"><br>Moto</a></li>
+                        <li><a href="@Url.Action("ServicoCaminhao", "Servicos")"><img src="~/images/caminhao.png"><br>Caminhão</a></li>
+                        <li><a href="@Url.Action("ServicoBau", "Servicos")"><img src="~/images/bau.png"><br>Baú</a></li>
+                        <li><a href="Servicos/servico-geladeira.html"><img src="~/images/geladeira.png"><br>Geladeira</a></li>
+                        <li><img src="~/images/outras.png"><br>Outras</li>
+                    </ul>
+                </div>
+            }
+
             <div class="backgroundMenu"></div>
             <div id="box-search" class="overlay">
                 <div class="content-overlay">
@@ -90,16 +94,16 @@
                     </ul>
                 </div>
             </div>
+
         </div>
 
         @RenderBody()
-        <hr />
         <footer>
             <div class="section-footer">
                 <div class="content-footer">
                     <div class="footer-left">
                         <div class="logo-footer">
-                            <img src="images/logo-footer.svg">
+                            <img src="~/images/logo-footer.svg">
                             <p>A maior plataforma de aplicadores de adesivos do Brasil.</p>
                         </div>
                         <div>
@@ -125,15 +129,15 @@
                     <div class="footer-right">
                         <div class="social-footer">
                             <a href="https://www.facebook.com/oaplicadorconsultoria/" target="_blank">
-                                <img src="images/facebook.png">
+                                <img src="~/images/facebook.png">
                             </a><br>
-                            <a href=""><img src="images/twitter.png"></a>
-                            <a href=""><img src="images/instagram.png"></a>
-                            <a href=""><img src="images/linkedin.png"></a>
+                            <a href=""><img src="~/images/twitter.png"></a>
+                            <a href=""><img src="~/images/instagram.png"></a>
+                            <a href=""><img src="~/images/linkedin.png"></a>
                             <a href="https://www.youtube.com/user/diowcwb" target="_blank">
-                                <img src="images/youtube.png">
+                                <img src="~/images/youtube.png">
                             </a><br>
-                            <a href=""><img src="images/email.png"></a>
+                            <a href=""><img src="~/images/email.png"></a>
                         </div>
                         <div class="newsletter-footer">
                             <p>Fique por dentro</p>
@@ -147,7 +151,7 @@
                 </div>
                 <div class="go-top">
                     <a href="#section-deslize" id="scrollSuaveTop" class="scrollSuave">
-                        <img src="images/arrow-top.png">
+                        <img src="~/images/arrow-top.png">
                     </a>
                 </div>
             </div>

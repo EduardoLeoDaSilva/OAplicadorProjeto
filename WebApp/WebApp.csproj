@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -127,6 +135,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entidades\Model1.cs" />
+    <Compile Include="Models\Entidades\sysdiagrams.cs" />
+    <Compile Include="Models\Entidades\TB_APLICADOR.cs" />
+    <Compile Include="Models\Entidades\TB_APLICADOR_CURSO.cs" />
+    <Compile Include="Models\Entidades\TB_APLICADOR_DOCUMENTO.cs" />
+    <Compile Include="Models\Entidades\TB_CLIENTE.cs" />
+    <Compile Include="Models\Entidades\TB_CONTAS_PAGAR.cs" />
+    <Compile Include="Models\Entidades\TB_CONTAS_RECEBER.cs" />
+    <Compile Include="Models\Entidades\TB_DOMINIO.cs" />
+    <Compile Include="Models\Entidades\TB_ITEM_DOMINIO.cs" />
+    <Compile Include="Models\Entidades\TB_ITEM_ORDEM_SERVICO.cs" />
+    <Compile Include="Models\Entidades\TB_ITEM_PEDIDO.cs" />
+    <Compile Include="Models\Entidades\TB_MARCA_AUTO.cs" />
+    <Compile Include="Models\Entidades\TB_MARCA_MOTO.cs" />
+    <Compile Include="Models\Entidades\TB_MODELO_AUTO.cs" />
+    <Compile Include="Models\Entidades\TB_MODELO_MOTO.cs" />
+    <Compile Include="Models\Entidades\TB_ORDEM_SERVICO.cs" />
+    <Compile Include="Models\Entidades\TB_OS_AVALIACAO.cs" />
+    <Compile Include="Models\Entidades\TB_PEDIDO.cs" />
+    <Compile Include="Models\Entidades\TB_PRECO_SERVICO.cs" />
+    <Compile Include="Models\Entidades\TB_SERVICO.cs" />
+    <Compile Include="Models\Entidades\TB_USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -294,7 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Entidades\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\Montserrat-Black.ttf" />
