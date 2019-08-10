@@ -1,3 +1,4 @@
+
 namespace WebApp.Models.Entidades
 {
     using System;
