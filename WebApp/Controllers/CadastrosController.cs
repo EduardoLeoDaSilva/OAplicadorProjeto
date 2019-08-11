@@ -4,15 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApp.Models.Entidades;
+using WebApp.Models.ViewModels;
 using WebApp.Repositories;
 
 namespace WebApp.Controllers
 {
     public class CadastrosController : Controller
     {
-
-        // GET: Cadastros
-
         private readonly IAplicadorRepository _aplicadorRepository;
         public CadastrosController(IAplicadorRepository aplicadorRepository)
         {
@@ -25,11 +23,12 @@ namespace WebApp.Controllers
             return View("cadastro-aplicador");
         }
         [HttpPost]
-        public ActionResult CadastroAplicador(TB_APLICADOR aplicador)
+        public ActionResult CadastroAplicador(AplicadorViewModel aplicador)
         {
             if (ModelState.IsValid)
             {
-                _aplicadorRepository.Salvar(aplicador);
+                var aplcadorEntidade = AutoMapper.Mapper.Map<AplicadorViewModel, TB_APLICADOR> (aplicador);
+                _aplicadorRepository.Salvar(aplcadorEntidade);
             return View("cadastro-aplicador");
             }
             return new HttpNotFoundResult();

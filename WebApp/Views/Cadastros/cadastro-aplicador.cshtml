@@ -1,5 +1,5 @@
-﻿@model WebApp.Models.Entidades.TB_APLICADOR
-@using (Html.BeginForm())
+﻿@model WebApp.Models.ViewModels.AplicadorViewModel
+@using (Html.BeginForm("CadastroAplicador", "Cadastros", FormMethod.Post, new { enctype="multipart/form-data" }))
 {
 
     @Html.AntiForgeryToken()
@@ -92,7 +92,8 @@
                                     <img src="~/images/file.png">
                                     <p>Enviar imagem...</p>
                                 </label>
-                                <input type="file" name="photo" id="upload-photo" />
+
+                                <input type="file" name="FOTO_APLICADOR" id="upload-photo" />
                             </div>
                         </div>
                     </div>

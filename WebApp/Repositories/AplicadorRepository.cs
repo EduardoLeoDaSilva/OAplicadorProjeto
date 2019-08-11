@@ -23,7 +23,7 @@ namespace WebApp.Repositories
             }
             else
             {
-                throw new NullReferenceException($"O parametron {nameof(aplicador)} é nulo");
+                throw new NullReferenceException($"O parametro {nameof(aplicador)} é nulo");
             }
         }
     }

@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -148,6 +151,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\Entidades\Model1.cs" />
     <Compile Include="Models\Entidades\sysdiagrams.cs" />
     <Compile Include="Models\Entidades\TB_APLICADOR.cs" />
@@ -170,6 +174,7 @@
     <Compile Include="Models\Entidades\TB_PRECO_SERVICO.cs" />
     <Compile Include="Models\Entidades\TB_SERVICO.cs" />
     <Compile Include="Models\Entidades\TB_USUARIO.cs" />
+    <Compile Include="Models\ViewModels\AplicadorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AplicadorRepository.cs" />
     <Compile Include="Repositories\IAplicadorRepository.cs" />
@@ -248,6 +253,9 @@
     <Content Include="images\youtube.png" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\.bower.json" />
+    <Content Include="Scripts\jquery-validation\.bower.json" />
+    <Content Include="Scripts\jquery-validation\LICENSE.md" />
     <None Include="Views\Cadastros\cadastro-aplicador.cshtml" />
     <None Include="Views\Cadastros\cadastro-cliente.cshtml" />
     <None Include="Views\Inicio\index.cshtml" />
@@ -263,6 +271,12 @@
     <None Include="Views\Servicos\servico-teto.cshtml" />
     <None Include="Views\Servicos\servico-veiculo.cshtml" />
     <None Include="Views\Servicos\servico-veiculo02.cshtml" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Scripts\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Scripts\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Scripts\jquery-validation\dist\jquery.validate.min.js" />
     <Content Include="Views\Shared\images\adicionar.svg" />
     <Content Include="Views\Shared\images\agilidade.png" />
     <Content Include="Views\Shared\images\arrow-left.PNG" />
@@ -337,6 +351,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Servicos\tetetet.cshtml" />
+    <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
