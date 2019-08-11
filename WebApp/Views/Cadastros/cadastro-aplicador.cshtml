@@ -1,4 +1,9 @@
-﻿    <section class="service">
+﻿@model WebApp.Models.Entidades.TB_APLICADOR
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <section class="service">
         <div class="cadastro">
             <div class="title-subpaginas">
                 <div>
@@ -19,53 +24,61 @@
                     <div class="cadastro-line">
                         <div>
                             <label>Nome completo</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.NOME_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
                         </div>
                     </div>
                     <div class="cadastro-line">
                         <div>
                             <label>Endereço</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.ENDERECO_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
                         </div>
                         <div class="low-cadastro cadastro-numero">
                             <label>Número</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.NR_CASA_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                     </div>
                     <div class="cadastro-line">
                         <div class="low-cadastro cadastro-complemento">
                             <label>Complemento</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.COMPLEMENTO_CASA_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                         <div>
                             <label>Bairro</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.BAIRRO_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                     </div>
                     <div class="cadastro-line">
                         <div>
                             <label>Cidade</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.CIDADE_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                         <div class="low-cadastro cadastro-uf">
                             <label>Uf</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.UF_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                     </div>
                     <div class="cadastro-line">
                         <div>
                             <label>Telefone</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.TELEFONE_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                         <div class="cadastro-celular">
                             <label>Celular</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.CELULAR_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                     </div>
                     <div class="cadastro-line">
                         <div>
                             <label>Email</label><br>
-                            <input type="text">
+                            @Html.EditorFor(model => model.EMAIL_APLICADOR, new { htmlAttributes = new { @class = "form-control" } })
+
                         </div>
                     </div>
                 </div>
@@ -138,11 +151,9 @@
         </div>
 
     </section>
-
-    <script>
-
-
-        var div = document.getElementsByClassName("select-photo")[0];
+}
+<script>
+var div = document.getElementsByClassName("select-photo")[0];
         var input = document.getElementById("upload-photo");
 
         div.addEventListener("click", function () {
@@ -152,6 +163,4 @@
             var nome = "Não há arquivo selecionado. Selecionar arquivo...";
             if (input.files.length > 0) nome = input.files[0].name;
             div.innerHTML = nome;
-        });
-
-    </script>
+        });</script>
